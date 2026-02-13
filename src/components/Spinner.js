@@ -1,6 +1,6 @@
 const React = require('react');
 
-function Spinner({ size, color, className }) {
+function Spinner({ size = 'md', color = '#3b82f6', className = '' }) {
   return React.createElement('div', {
     className: `spinner spinner-${size} ${className}`,
     style: { borderColor: color },
@@ -10,11 +10,5 @@ function Spinner({ size, color, className }) {
     React.createElement('span', { className: 'sr-only' }, 'Loading...')
   );
 }
-
-Spinner.defaultProps = {
-  size: 'md',
-  color: '#3b82f6',
-  className: ''
-};
 
 module.exports = Spinner;

@@ -1,17 +1,11 @@
 const React = require('react');
 
-function Button({ children, variant, size, disabled, onClick }) {
+function Button({ children, variant = 'primary', size = 'md', disabled = false, onClick }) {
   return React.createElement('button', {
     className: `btn btn-${variant} btn-${size}`,
     disabled,
     onClick
   }, children);
 }
-
-Button.defaultProps = {
-  variant: 'primary',
-  size: 'md',
-  disabled: false
-};
 
 module.exports = Button;

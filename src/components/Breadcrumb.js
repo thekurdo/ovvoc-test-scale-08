@@ -1,6 +1,6 @@
 const React = require('react');
 
-const Breadcrumb = React.forwardRef(function Breadcrumb({ items, separator, className }, ref) {
+const Breadcrumb = /* TODO: forwardRef is no longer needed in React 19 - ref is a regular prop */function Breadcrumb({ items, separator, className }, ref) {
   return React.createElement('nav', {
     ref,
     className: `breadcrumb ${className}`,
