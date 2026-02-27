@@ -2,6 +2,11 @@
   "name": "ovvoc-test-scale-08",
   "version": "1.0.0",
   "description": "React 18 component library with 15 components",
-  "scripts": { "test": "node test/components.test.js" },
-  "dependencies": { "react": "18.2.0", "react-dom": "18.2.0" }
+  "scripts": {
+    "test": "node test/components.test.js"
+  },
+  "dependencies": {
+    "react": "19.0.0",
+    "react-dom": "19.0.0"
+  }
 }

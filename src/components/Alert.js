@@ -1,6 +1,6 @@
 const React = require('react');
 
-function Alert({ children, type, dismissible, onDismiss }) {
+function Alert({ children, type = 'info', dismissible = false, onDismiss }) {
   return React.createElement('div', {
     className: `alert alert-${type}`,
     role: 'alert'
@@ -12,10 +12,5 @@ function Alert({ children, type, dismissible, onDismiss }) {
     }, '\u00d7') : null
   );
 }
-
-Alert.defaultProps = {
-  type: 'info',
-  dismissible: false
-};
 
 module.exports = Alert;

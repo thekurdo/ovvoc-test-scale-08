@@ -1,6 +1,6 @@
 const React = require('react');
 
-function Pagination({ currentPage, totalPages, onPageChange, size }) {
+function Pagination({ currentPage = 1, totalPages = 1, onPageChange, size = 'md' }) {
   var pages = [];
   for (var i = 1; i <= totalPages; i++) { pages.push(i); }
   return React.createElement('nav', { className: `pagination pagination-${size}`, 'aria-label': 'Pagination' },
@@ -23,11 +23,5 @@ function Pagination({ currentPage, totalPages, onPageChange, size }) {
     }, 'Next')
   );
 }
-
-Pagination.defaultProps = {
-  currentPage: 1,
-  totalPages: 1,
-  size: 'md'
-};
 
 module.exports = Pagination;

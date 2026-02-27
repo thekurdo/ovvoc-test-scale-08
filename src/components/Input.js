@@ -1,6 +1,6 @@
 const React = require('react');
 
-const Input = React.forwardRef(function Input({ type, placeholder, value, onChange, disabled }, ref) {
+const Input = function Input({ type = 'text', placeholder = '', value, onChange, disabled = false, ref }) {
   return React.createElement('input', {
     ref,
     type,
@@ -10,12 +10,6 @@ const Input = React.forwardRef(function Input({ type, placeholder, value, onChan
     disabled,
     className: 'input'
   });
-});
-
-Input.defaultProps = {
-  type: 'text',
-  placeholder: '',
-  disabled: false
 };
 
 module.exports = Input;

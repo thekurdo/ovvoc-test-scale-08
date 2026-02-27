@@ -1,6 +1,6 @@
 const React = require('react');
 
-const Select = React.forwardRef(function Select({ options, value, onChange, placeholder, disabled }, ref) {
+const Select = function Select({ options = [], value, onChange, placeholder = 'Select...', disabled = false, ref }) {
   return React.createElement('select', {
     ref,
     value,
@@ -13,12 +13,6 @@ const Select = React.forwardRef(function Select({ options, value, onChange, plac
       return React.createElement('option', { key: opt.value, value: opt.value }, opt.label);
     })
   );
-});
-
-Select.defaultProps = {
-  options: [],
-  placeholder: 'Select...',
-  disabled: false
 };
 
 module.exports = Select;

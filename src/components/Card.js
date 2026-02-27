@@ -1,6 +1,6 @@
 const React = require('react');
 
-function Card({ children, title, bordered, padding }) {
+function Card({ children, title = '', bordered = true, padding = '16px' }) {
   return React.createElement('div', {
     className: `card${bordered ? ' card-bordered' : ''}`,
     style: { padding }
@@ -9,11 +9,5 @@ function Card({ children, title, bordered, padding }) {
     React.createElement('div', { className: 'card-body' }, children)
   );
 }
-
-Card.defaultProps = {
-  bordered: true,
-  padding: '16px',
-  title: ''
-};
 
 module.exports = Card;

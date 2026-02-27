@@ -1,6 +1,6 @@
 const React = require('react');
 
-function Accordion({ items, allowMultiple, className }) {
+function Accordion({ items = [], allowMultiple = false, className = '' }) {
   return React.createElement('div', {
     className: `accordion ${className}`,
     'data-allow-multiple': allowMultiple
@@ -13,11 +13,5 @@ function Accordion({ items, allowMultiple, className }) {
     })
   );
 }
-
-Accordion.defaultProps = {
-  items: [],
-  allowMultiple: false,
-  className: ''
-};
 
 module.exports = Accordion;
